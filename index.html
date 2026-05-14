@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Taube | Gastronomía y Tradición</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root { --accent: #b30000; --gold: #c5a059; --bg: #fdfcf9; --text: #2c2c2c; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background-color: var(--bg); color: var(--text); scroll-behavior: smooth; }
+        
+        nav { background: rgba(255, 255, 255, 0.98); padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        nav a { text-decoration: none; color: var(--text); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
+
+        .hero { height: 35vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: white; border-bottom: 1px solid var(--gold); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0; letter-spacing: 4px; }
+        .hero .oriental { font-family: 'Noto Sans JP', sans-serif; color: var(--gold); letter-spacing: 10px; font-size: 1.1rem; }
+
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .section-title { font-family: 'Playfair Display', serif; text-align: center; font-size: 2rem; color: var(--accent); margin: 50px 0 30px; border-bottom: 1px solid var(--gold); width: 100%; padding-bottom: 10px; }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .gallery-item { height: 250px; background: #eee; border-radius: 4px; overflow: hidden; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 10px 40px; }
+        .menu-item { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; }
+        .dots { flex: 1; border-bottom: 1px dotted #ddd; margin: 0 10px; }
+        .price { font-family: 'Playfair Display', serif; font-weight: bold; color: var(--gold); }
+
+        .event-box { background: white; border: 1px solid var(--gold); padding: 30px; text-align: center; margin: 40px 0; border-radius: 8px; }
+        .alergenos-box { background: #f4f4f4; padding: 15px; margin-top: 40px; font-size: 0.75rem; text-align: center; color: #666; border-radius: 4px; }
+
+        .btn-action { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 2000; }
+        .btn-round { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        .map-container { width: 100%; height: 350px; border: 1px solid var(--gold); margin-top: 20px; border-radius: 8px; overflow: hidden; }
+        footer { text-align: center; padding: 60px 20px; background: #1a1a1a; color: #ddd; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <div class="btn-action">
+        <a href="https://wa.me/34665128962" class="btn-round" style="background:#25d366;"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+34665128962" class="btn-round" style="background:var(--accent);"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#tapas">Tapas</a>
+        <a href="#raciones">Raciones</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#ubicacion">Ubicación</a>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <h1>Die Taube</h1>
+        <div class="oriental">美食与传统</div>
+    </header>
+
+    <div class="container">
+        
+        <section id="nosotros" style="text-align:center; padding: 40px 0;">
+            <h2 class="section-title">Nuestra Esencia</h2>
+            <p style="font-style: italic; line-height: 1.8; color: #555; max-width: 800px; margin: auto;">
+                Ubicados en Jaén, fusionamos la tradición del tapeo local con raíces orientales. Un espacio pensado para disfrutar del sabor auténtico y la hospitalidad de nuestra tierra.
+            </p>
+        </section>
+
+        <section id="galeria">
+            <h2 class="section-title">Fotografía Gastronómica</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600" alt="Gastronomía"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563379091339-03b21bc4a4f8?auto=format&fit=crop&w=600" alt="Tapas"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600" alt="Raciones"></div>
+            </div>
+        </section>
+
+        <section id="tapas">
+            <h2 class="section-title">Tapas "Free"</h2>
+            <p style="text-align:center; font-style:italic; margin-bottom:20px;">Máximo 2 tipos por ronda • Tapa extra: 1,50€</p>
+            <div class="menu-grid">
+                <div class="menu-item"><span>Alpargata de Jamón Asado</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Alpargata de Jamón Serrano</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Bacalao Frito</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Wan Tun Fritos</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Rollo de Primavera</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Jamón o Queso con Aceite</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Boquerón Frito</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Rejos Fritos</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Langostino Cocido</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Arroz Tres Delicias</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Palomitas de Pollo</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Patata Rellena</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Croqueta / Chorizo Plancha</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Patatas Bravas / Ali-oli</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Huevo con Patatas</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Pinchito de Pollo</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Montadito de Jamón Serrano</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Montadito de Lomo y Pimientos</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Montadito de Bacón y Queso</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Perrito Caliente</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Alita de Pollo</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Callos</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Carne con Tomate</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Ensaladilla Rusa</span><span class="dots"></span><span class="price">FREE</span></div>
+                <div class="menu-item"><span>Gazpacho (Verano)</span><span class="dots"></span><span class="price">FREE</span></div>
+            </div>
+        </section>
+
+        <section id="raciones">
+            <h2 class="section-title">Raciones y Bocadillos</h2>
+            <div class="menu-grid">
+                <div class="menu-item"><span>Ensalada Mixta</span><span class="dots"></span><span class="price">6,00€</span></div>
+                <div class="menu-item"><span>Flamenquín Casero</span><span class="dots"></span><span class="price">6,50€</span></div>
+                <div class="menu-item"><span>Solomillo Pimienta</span><span class="dots"></span><span class="price">12,50€</span></div>
+                <div class="menu-item"><span>Gambas al Ajillo</span><span class="dots"></span><span class="price">11,00€</span></div>
+                <div class="menu-item"><span>Hamburguesa Completa</span><span class="dots"></span><span class="price">3,50€</span></div>
+                <div class="menu-item"><span>Serranito Especial</span><span class="dots"></span><span class="price">3,50€</span></div>
+            </div>
+        </section>
+
+        <section id="eventos" class="event-box">
+            <h2 style="font-family: 'Playfair Display', serif; color: var(--accent);">Celebraciones y Eventos</h2>
+            <p>¿Planeas una comida de grupo o un evento familiar? Consulta nuestras opciones personalizadas para reservas.</p>
+            <a href="https://wa.me/34665128962" style="color: var(--gold); text-decoration: none; font-weight: bold;">SOLICITAR INFORMACIÓN →</a>
+        </section>
+
+        <section id="ubicacion">
+            <h2 class="section-title">Dónde estamos</h2>
+            <p style="text-align:center; margin-bottom:15px;"><i class="fas fa-map-marker-alt"></i> Tr.ª Salvador Vte. da la Torre, 6, 23005 Jaén</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.417!2d-3.79155!3d37.7687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6dd70000000000%3A0x0000000000000000!2sTr.%20Salvador%20Vicente%20de%20la%20Torre%2C%206%2C%2023005%20Ja%C3%A9n!5e0!3m2!1ses!2ses!4v1715690000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="alergenos-box">
+            <p><i class="fas fa-info-circle"></i> Disponemos de información obligatoria sobre alérgenos (Reglamento UE 1169/2011). Por favor, informe a nuestro personal antes de pedir.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Die Taube Jaén</strong><br>Tr.ª Salvador Vte. da la Torre, 6 • 665 12 89 62</p>
+        <p style="color:#666; font-size:0.7rem; margin-top:20px; text-transform:uppercase; letter-spacing: 1px;">
+            Diseño Web y Fotografía Comercial por <strong>Darío Hernández Vico</strong>
+        </p>
+    </footer>
+
+</body>
+</html>
